@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>task7-2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		html,body{width: 100%;height: 100%;}
+		html{font-size: 62.5%}
+		body{background-color: #29bde0;}
+
+		.container{
+			width: 100%;height: 100%;
+		}
+		.header{
+			padding: 0 4rem;
+			width: 100%;
+			height: 4rem;
+			line-height: 4rem;
+			display: flex;
+			justify-content: space-between;
+		}
+		.header p{
+			margin: 0;
+			font-size: 2rem;
+			letter-spacing: .2rem;
+			color: #fff;
+		}
+		.sheet{
+			margin-top: 1rem;
+			display: inline-block;
+			width: 2rem;
+			height: 2rem;
+			background: url(img7/head2.png) no-repeat;
+			background-size: 2rem 4rem;
+			background-position: 0 0;
+		}
+		.quit{
+			margin-top: 1rem;
+			display: inline-block;
+			width: 2rem;
+			height: 2rem;
+			background: url(img7/head2.png) no-repeat;
+			background-size: 2rem 4rem;
+			background-position: 0 -2.1rem;
+		}
+		.vote{
+			display: flex;
+			justify-content: space-around;
+			background-color: #b9e9f5;
+			height: 4rem;
+			line-height: 4rem;
+			font-size: 1.5rem;
+			color: #545a5c;
+		}
+		.img11{
+			width: 2rem;
+			height: 2rem;	
+		}
+		.triangle-down {
+		    width: 0;
+		    height: 0;
+		    border-left: .5rem solid transparent;
+		    border-right: .5rem solid transparent;
+		    border-top: 1rem solid #b9e9f5;
+		    margin-left: 2rem;
+		}
+		.clic{
+			height: 3rem;
+			font-size: 1.5rem;
+			color: #fff;
+			margin-left: 2rem;
+		}
+		.item{
+			height: 9.5rem;
+			display: flex;
+			justify-content: space-between;
+		}
+		.vote-item1{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: 0 0;
+		}
+		.vote-item2{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -6rem 0;
+		}
+		.vote-item3{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -12rem 0;
+		}
+		.vote-item4{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -18rem 0;
+		}
+		.vote-item5{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -24rem 0;
+		}
+		.vote-item6{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -30rem 0;
+		}
+		.vote-item7{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -36rem 0;
+		}
+		.vote-item8{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -42rem 0;
+		}
+		.vote-item9{
+			display: inline-block;
+			width: 6rem;height: 6rem;
+			background: url(img7/bgimg.png) no-repeat;
+			background-size: 54rem 6rem;
+			background-position: -48rem 0;
+		}
+		.popup{
+			width: 6rem;
+			height: 1.5rem;
+			margin-top: 7rem;
+			margin-left:-1.3rem;
+			visibility: hidden;
+		}
+		.vote-item:hover .popup{
+			visibility: visible;
+		}
+		.foot{
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			height: 6rem;
+			line-height: 6rem;
+			background-color: #29bde0;
+			text-align: center;
+		}
+		.button{
+			font-size: 2rem;
+			width: 80%;
+			height: 4rem;
+			border-radius: 0;
+			background-color: #fbb435;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 header">
+				<i class="sheet"></i>
+				<p>投票</p>
+				<i class="quit"></i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 vote">
+				<p>发言讨论结束，请大家投票</p>
+				<div>
+					<audio src="audio/财富自由.mp3" autoplay="">
+					Your browser does not support the audio element！
+					</audio>
+					<img src="img7/img_11.png" alt="" class="img11">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="triangle-down"></div>
+				<div class="clic">点击得票数最多人的头像</div>
+			</div>
+		</div>
+		<div class="row main">
+			<div class="col-xs-12 ">
+				<div class="row item">
+					<div class="col-xs-3 vote-item vote-item1">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item2">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item3">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 ">
+				<div class="row item">
+					<div class="col-xs-3 vote-item vote-item4">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item5">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item6">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 ">
+				<div class="row item">
+					<div class="col-xs-3 vote-item vote-item7">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item8">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item9">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 ">
+				<div class="row item">
+					<div class="col-xs-3 vote-item vote-item1">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item2">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+					<div class="col-xs-3 vote-item vote-item3">
+						<img src="img7/pop-up.png" alt="" class="popup">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 foot">
+				<button class="btn button" onclick="window.open('task7-3.html')">投死</button> 
+			</div>
+		</div>
+	</div>
+</body>
+</html>

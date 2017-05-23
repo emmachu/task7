@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>task7-3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		body,html{width: 100%;height: 100%;}
+		html{font-size: 62.5%;}
+		body{
+			overflow-x: hidden;
+			overflow-y:auto;
+		}
+		.container{
+			width: 100%;height: 100%;
+			margin: 0;padding: 0;
+		}
+		.header{
+			width: 100%;
+			height: 4rem;
+			line-height: 4rem;
+			background-color: #29bde0;
+			font-size: 2rem;
+			color: #fff;
+			border-bottom: 1px solid #fff;
+
+			display: flex;
+			justify-content: space-between;
+			
+		}
+		.home-page{
+			width: 2.6rem;
+			height: 2rem;
+			background: url(img7/head3.png) no-repeat;
+			background-size: 4.5rem 2rem;
+			background-position: 0 0;
+			margin-top: 1rem;
+			margin-left: 1rem;
+		}
+		.alert{
+			width: 1.9rem;
+			height: 2rem;
+			background: url(img7/head3.png) no-repeat;
+			background-size: 4.5rem 2rem;
+			background-position: -2.55rem 0;
+			margin-top: 1rem;
+		}
+
+		.part1{
+			background-color: #29bde0;
+		}
+		.icon{
+			width: 100%;
+			height: 14rem;
+			background: url(img7/icon.png) no-repeat center center;
+			background-size: 18rem 10rem;
+		}
+		.part1 p{
+			width: 22rem;
+			height: 7rem;
+			font-size: 2rem;
+			font-family: 黑体;
+			color: #ffc865;
+			margin: 0 auto;
+		}
+		.detail{
+			margin-top: 2rem;
+			height: 10rem;
+			border-bottom: 1px solid #ddd;
+		}
+		.detail-item{
+			width: 25rem;
+			margin:.2rem auto;
+			font-size: 1.5rem;
+			color: #fff;
+		}
+		.part2{
+			margin: 0;padding: 0;
+		}
+		.list{
+			margin: 0;padding: 0;
+		}
+		.list-item{
+			padding: 0 2rem;
+			list-style-type: none;
+			border-bottom: 1px solid #ddd;
+		}
+		.day{
+			float: left;
+			font-size: 1.5rem;
+			color: #515151;
+		}
+		.time{
+			float: right;
+			font-size: 1rem;
+			color: #d5d5d5;
+		}
+		.combat{
+			clear: both;
+			font-size: 1.4rem;
+			color: #bcbcbc;
+			padding:1rem 0;
+		}
+		.lastnews{
+			margin-top: -1rem;
+			display: flex;
+			justify-content: space-between;
+		}
+		.div1{
+			font-size: 2rem;
+			color: #29bde0;
+		}
+		.div2{
+			font-size: 1.5rem;
+			color: #29bde0;
+		}
+		.footer{
+			width: 100%;
+			height: 6rem;
+
+			margin: 0;
+			padding: 0;
+
+			position: fixed;
+			bottom: 0;
+			background-color: rgba(41,189,224,0.5);
+			display: flex;
+			justify-content: space-between;
+		}
+		.again, .share{
+			margin-top: 1rem;
+			font-size: 2rem;
+			width: 40%;
+			height: 4rem;
+			color: #fff;
+		}
+		.again{
+			background-color: #f66f6f;
+		}
+		.share{
+			background-color: #fbb435;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 header">
+				<div class="home-page"></div>
+				<div>游戏结果</div>
+				<div class="alert"></div>
+			</div>
+		</div>
+		<div class="row part1">
+			<div class="col-xs-12">
+				<div class="icon"></div>
+				<p>太棒了!你知道吗?在捉鬼游戏中只有20%的卧底取得游戏的最终胜利哦!</p>
+			</div>
+			<div class="col-xs-12 detail">
+				<div class="row detail-item">
+					<div class="col-xs-12">
+						本次游戏共计用时0小时25分钟
+					</div>
+				</div>
+				<div class="row detail-item">
+					<div class="col-xs-4">杀&nbsp;&nbsp;&nbsp;手0人</div>
+					<div class="col-xs-4">警&nbsp;&nbsp;&nbsp;察1人</div>
+					<div class="col-xs-4">平&nbsp;&nbsp;&nbsp;民6人</div>
+				</div>
+				<div class="row detail-item">
+					<div class="col-xs-4">狙击手0人</div>
+					<div class="col-xs-4">医&nbsp;&nbsp;&nbsp;生1人</div>
+				</div>
+				<div class="row detail-item">
+					<div class="col-xs-12">
+						卧底词汇：爱新觉罗
+					</div>
+				</div>
+				<div class="row detail-item">
+					<div class="col-xs-12">
+						水民词汇：努尔哈赤
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row part2">
+			<div class="col-xs-12 list">
+				<ul class="list-group">
+					<li class="list-item">
+						<div class="day">第1天</div>
+						<div class="time">0小时07分</div>
+						<div class="combat">
+							晚上：5号被杀手杀死，5号是水民<br/>
+							白天：8号被全民投票投死，8号是杀手
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="day">第2天</div>
+						<div class="time">0小时07分</div>
+						<div class="combat">
+							晚上：5号被杀手杀死，5号是水民<br/>
+							白天：8号被全民投票投死，8号是杀手
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-12 lastnews">
+				<div class="div1">第2天</div>
+				<div class="div2">0小时07分</div>
+			</div>
+		</div>
+		<div class="row footer">
+			<button class="btn again">再来一局</button>
+			<button class="btn share">上传并分享</button>
+		</div>
+	</div>
+</body>
+</html>
